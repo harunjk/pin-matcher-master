@@ -40,3 +40,27 @@ document.getElementById('calculetor').addEventListener('click',function(Event){
         trypeNumber.value=previewNumber;
     }
 })
+
+// Pin Matching 
+
+document.getElementById('pin-verify').addEventListener('click',function(){
+    const genaretPin=document.getElementById('input-pin');
+    const genaretPinValue=genaretPin.value;
+
+    const typePin=document.getElementById('type-Number');
+    const typePinValue=typePin.value;
+
+    
+    const successPin=document.getElementById('success');
+    const wrongPin=document.getElementById('notMatch');
+
+
+    if(genaretPinValue===typePinValue){
+        successPin.style.display='block';
+        wrongPin.style.display='none';
+    }
+    else{
+        wrongPin.style.display='block';
+        successPin.style.display='none';
+    }
+})
